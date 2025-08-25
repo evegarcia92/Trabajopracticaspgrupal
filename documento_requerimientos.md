@@ -22,25 +22,26 @@
 
 <H3>FUNCIONALIDADES DEL SISTEMA</H3>
 
-</P>· Módulo: <strong>Usuario</strong><br>
+</P>· Módulo: <strong>Usuario</strong><br> :bust_in_silhouette:
 Registro básico de usuarios (solo como actores del reclamo).</P>
 
-</P>· Módulo: <strong>Reclamos</strong><br>
+</P>· Módulo: <strong>Reclamos</strong><br> :warning:
+
 Permite registrar reclamos por parte de los usuarios. Cada reclamo se asocia a un bache específico.</P>
 
-</P>· Módulo: <strong>Baches</strong><br>
+</P>· Módulo: <strong>Baches</strong><br> 	:construction:
 Registro de información de baches (descripción, ubicación, observaciones). Asociación de reclamos al bache. Relación con inspecciones y órdenes de trabajo.</P>
 
-</P>· Módulo: <strong>Inspector</strong><br>
+</P>· Módulo: <strong>Inspector</strong><br> :mag_right:
 Permite que un inspector registre observaciones sobre un bache.</P>
 
-</P>· Módulo: <strong>Orden de Trabajo</strong><br>
+</P>· Módulo: <strong>Orden de Trabajo</strong><br>  :memo:
 Permite generar una orden a partir de un bache. Asociación con una cuadrilla y posterior reparación.</P>
 
-</P>· Módulo: <strong>Cuadrilla</strong><br>
+</P>· Módulo: <strong>Cuadrilla</strong><br> :construction_worker:
 Registro de cuadrillas asignadas a órdenes de trabajo.</P>
 
-</P>· Módulo: <strong>Reparación</strong><br>
+</P>· Módulo: <strong>Reparación</strong><br> :wrench:
 Registro de reparaciones realizadas sobre baches. Incluye fechas y observaciones de la intervención.</P>
 
 
