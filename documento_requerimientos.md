@@ -25,7 +25,7 @@
 </P>· Módulo: <strong>Usuario</strong><br> :bust_in_silhouette:
 Registro básico de usuarios (solo como actores del reclamo).</P>
 
-</P>· Módulo: <strong>Reclamos</strong><br> :warning:
+</P>· Módulo: <strong>Reclamos</strong><br>:warning:
 
 Permite registrar reclamos por parte de los usuarios. Cada reclamo se asocia a un bache específico.</P>
 
