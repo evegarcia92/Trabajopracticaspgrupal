@@ -1,5 +1,6 @@
 # Trabajopracticaspgrupal
-Trabajo practico practicas profesionalizantes
+Practicas Profesionalizantes 1
+Sistema de seguimiemto y reparación de baches
 por Evelin Garcia, Ariel Jaime & Dario Buceta
 
 
