@@ -1,0 +1,170 @@
+INFORME TÉCNICO: SISTEMA DE GESTIÓN DE RECLAMOS Y REPARACIÓN DE BACHES
+Versión: 1.0
+Fecha de Elaboración: Octubre 2024
+Destinatario: Departamento de Obras Públicas, Municipalidad de Bahía Blanca
+
+---
+
+1. Introducción
+
+El presente informe describe el diseño y la propuesta de implementación de un Sistema de Gestión de Reclamos y Reparación de Baches, desarrollado para el Departamento de Obras Públicas de la ciudad de Bahía Blanca. Este sistema busca optimizar y digitalizar el proceso completo de reporte, evaluación y reparación de baches, reemplazando los métodos manuales actuales por una plataforma centralizada que garantice trazabilidad, eficiencia y transparencia.
+
+La iniciativa surge como respuesta a problemáticas identificadas en la gestión actual, tales como la pérdida de información, falta de control sobre el avance de las reparaciones y la inexistencia de un registro unificado.
+
+---
+
+2. Diagnóstico de la Situación Actual
+
+Actualmente, el proceso de reporte y seguimiento de baches se realiza mediante planillas físicas, hojas de cálculo dispersas y notas sueltas. Este enfoque presenta las siguientes limitaciones:
+
+· Falta de centralización: No existe un sistema único que unifique los reportes.
+· Pérdida o duplicación de datos: La información no está estandarizada ni consolidada.
+· Baja trazabilidad: Es difícil realizar un seguimiento del estado de cada reclamo.
+· Ineficiencia operativa: La comunicación entre ciudadanos, inspectores, administradores y cuadrillas es lenta y propensa a errores.
+
+Estos factores generan retrasos en la reparación, insatisfacción ciudadana y un uso ineficiente de los recursos municipales.
+
+---
+
+3. Propuesta de Solución: Sistema Digital Integrado
+
+Se propone un sistema web único que integre todos los actores y etapas del proceso, desde el reporte ciudadano hasta la reparación final. Los objetivos principales son:
+
+· Centralizar la información en una única plataforma.
+· Automatizar el flujo de trabajo entre actores.
+· Garantizar trazabilidad completa de cada reclamo.
+· Mejorar la comunicación y transparencia hacia la ciudadanía.
+
+---
+
+4. Alcance del Sistema
+
+El sistema abarca el ciclo completo de gestión de baches, que incluye las siguientes etapas:
+
+1. Registro de usuarios (ciudadanos, inspectores, administradores y cuadrillas).
+2. Reporte de baches por parte de los ciudadanos.
+3. Evaluación y detalle técnico por inspectores.
+4. Asociación de reclamos múltiples a un mismo bache.
+5. Generación de órdenes de trabajo por administradores.
+6. Ejecución y registro de reparaciones por cuadrillas.
+7. Registro de daños asociados y su presupuesto.
+
+Cada etapa está interconectada, asegurando que la información fluya de manera coherente y actualizada.
+
+---
+
+5. Funcionalidades Principales (Módulos)
+
+El sistema se estructura en los siguientes módulos funcionales:
+
+Módulo Descripción
+Usuario Registro y autenticación de ciudadanos, inspectores, administradores y cuadrillas.
+Reclamos Gestión de reportes de baches y asociación con reclamos existentes.
+Baches Almacenamiento de datos técnicos: ubicación, tamaño, prioridad, etc.
+Inspector Evaluación en campo, validación de datos y priorización.
+Orden de Trabajo Generación y asignación de órdenes de reparación.
+Cuadrilla Gestión de personal, equipos y asignación de tareas.
+Reparación Registro de ejecución, materiales, costos y estado final.
+
+---
+
+6. Casos de Uso Detallados
+
+6.1. Registrar_Usuarios
+
+· Actor primario: Ciudadano, Inspector, Administrador, Cuadrilla.
+· Flujo: Registro con nombre, apellido, correo electrónico y carácter de usuario.
+· Condiciones: Poseer cuenta de correo y aceptar políticas de uso de datos.
+· Flujo alternativo: Enlace a Gmail para crear cuenta si no se posee una.
+
+6.2. Reporte_Bache
+
+· Actor primario: Ciudadano.
+· Flujo: Ingreso de ubicación, tamaño, prioridad y confirmación de datos.
+· Condición previa: Usuario registrado y con permisos aceptados.
+· Flujo alternativo: Si no aceptó permisos, se redirige a “Registrar_Usuarios”.
+
+6.3. Registrar_Daños_Por_Bache
+
+· Actor primario: Ciudadano.
+· Flujo: Registro de daños materiales y presupuesto de reparación.
+· Flujo alternativo: Permite guardar temporalmente el registro si no se cuenta con presupuesto (hasta 30 días).
+
+6.4. Registro_Detalle_Bache
+
+· Actor primario: Inspector.
+· Flujo: Validación o modificación de datos reportados por el ciudadano.
+· Condición: Reporte confirmado y evaluación pendiente.
+
+6.5. Asociar_Reclamos_Multiples
+
+· Actor primario: Administrador.
+· Flujo: Agrupa reclamos de un mismo bache bajo un ID único.
+
+6.6. Orden_De_Trabajo
+
+· Actor primario: Administrador.
+· Flujo: Define ubicación, cuadrilla, recursos, tiempo estimado y estado de reparación.
+
+---
+
+7. Requerimientos del Sistema
+
+7.1. Requerimientos Funcionales
+
+· Registrar baches con ID único, ubicación y tamaño (escala 1-10).
+· Asociar múltiples reclamos a un mismo bache.
+· Permitir la evaluación y priorización por inspectores.
+· Generar órdenes de trabajo y asignar cuadrillas.
+· Registrar reparaciones con fechas, costos y materiales.
+· Emitir reportes por barrio, estado o fecha.
+· Consulta ciudadana del estado del reclamo.
+
+7.2. Requerimientos No Funcionales
+
+· Accesibilidad: Vía web, compatible con dispositivos móviles.
+· Trazabilidad: Registro completo de cada acción.
+· Integridad de datos: Validación y consistencia de la información.
+· Usabilidad: Interfaz intuitiva para todos los actores.
+· Disponibilidad: 99,5% de tiempo operativo.
+· Seguridad: Cifrado de datos sensibles y control de accesos.
+
+---
+
+8. Diagrama de Contexto
+
+El sistema se relaciona con los siguientes actores externos:
+
+· Ciudadano: Reporta baches y consulta estados.
+· Inspector: Evalúa y prioriza reclamos.
+· Administrador: Genera órdenes y reportes.
+· Cuadrilla: Ejecuta reparaciones y actualiza estados.
+
+El sistema actúa como núcleo central de comunicación, integrando todas las interacciones en un flujo coherente.
+
+---
+
+9. Impacto Esperado
+
+La implementación del sistema permitirá:
+
+· Reducir tiempos de respuesta y reparación.
+· Eliminar duplicación y pérdida de información.
+· Incrementar la transparencia y confianza ciudadana.
+· Optimizar la asignación de recursos humanos y materiales.
+· Facilitar la generación de métricas e indicadores de gestión.
+
+---
+
+10. Conclusión
+
+El Sistema de Gestión de Reclamos y Reparación de Baches representa una solución tecnológica integral para modernizar la gestión municipal de infraestructura vial. A través de la digitalización de procesos, centralización de datos y automatización de flujos, se logra un modelo eficiente, trazable y confiable, alineado con los estándares de gobierno digital y atención al ciudadano.
+
+Se recomienda su adopción progresiva, con capacitación a los actores involucrados y una etapa de prueba piloto para ajustes finales.
+
+---
+
+Fin del Informe
+Elaborado por el equipo de desarrollo del Sistema de Gestión de Reclamos y Reparación de Baches.
+📧 Contacto: [equipo@proyectobaches.com]
+🌐 Sitio web: [www.proyectobaches.com]
